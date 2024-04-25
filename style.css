@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins",  sans-serif;
+    /* -webkit-font-smoothing: antialiased; */
+
+    /* in full web page all box-sizing are represent as a border-box so, all the padding and marging effect are applyed inside the element */
+    box-sizing:border-box;
+}
+
+header{
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid #9d9191;
+    background-color: blue;
+    color:white;
+}
+.menubar_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 17px 5px;
+    border-bottom: 5px solid white;
+}
+
+.main{
+    display: inline;
+    text-decoration:none;
+}
+
+.sidebar{
+    height: 100px;
+    width: 180px;
+    position: absolute;
+    background-color: rgb(36, 3, 142);
+    transition: 0.5s ease;
+    transform: translateX(-180px);
+    color: white;
+}
+ul li{
+    list-style: none;
+    font-size: large;
+}
+ul li a{
+    color: rgb(247, 247, 250);
+    font-weight: 500;
+    padding: 5px 0;
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease-out;
+    background-color: rgb(27, 6, 165);
+}
+input{
+    /* display: none; */
+    /* visibility: hidden; */
+    /* -webkit-appearance: none; */
+}
+.toggle{
+    position: absolute;
+    height: 100px;
+    width: 50px;
+    top: 5px;
+    left: 15px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.toggle .common{
+    position: absolute;
+    transition: 0.3s ease;
+}
+.toggle .top_line{
+    top: 100px;
+    left: 50px;
+    transform: translate(-50%,-50%);
+}
+.toggle .middle_line{
+    top: 100px;
+    left: 50px;
+    transform: translate(-50%,-50%);
+}
+.toggle .bottom_line{
+    top: 100px;
+    left: 50px;
+    transform: translate(-50%,-50%);
+}
+input:checked ~ .toggle .top_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+input:checked ~ .toggle .bottom_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+input:checked ~ .toggle .middle_line{
+    opacity: 0;
+    transform: translateX(20px);
+}
+input:checked ~ .sidebar{
+    transform: translateX(0);
+
+}
+.navbar{
+    display: flex;
+    min-width: 600px;
+    justify-content: space-evenly;
+}
+.navbar a{
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: white;
+    font-weight: 700px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 28px 0;
+    border-bottom: 5px solid white;
+}
+.search_bar{
+    height: 40px;
+    min-width: 200px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+.search_icon{
+    box-sizing: content-box;
+    height: 20px;
+    padding: 10px;
+    background-color:white;
+    color: rgb(150,132,132);
+    font-weight: 300;
+    border-radius: 4px 0 0 4px;
+}
+.search_input{
+    color: rgb(150, 132, 132);
+    background-color: white;
+    flex-grow: 1;
+    height: 40px;
+    border: 0;
+    border-radius: 0 4px 4px 0;
+    display: inline;
+    visibility: visible;
+}
+.search_input:focus{
+    outline: none;
+}
+.logout_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 17px 0;
+    border-bottom: 5px solid white;
+    width: 5%;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+tr{
+    display: flex;
+    
+}
+form{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 30px;
+    padding: 10px;
+    border: 1px solid black;
+
+}
+form input,select{
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+form input:focus{
+    outline:none;
+}
+form input[type="file"]{
+    border:none;
+}
+form input[type="submit"]{
+    border:none;
+    background-color: blue;
+    padding: 10px;
+    font-size: 22px;
+    color: white;
+    border-radius: 20px;
+    
+}
+form input[type="radio"]{
+    display: flex;
+    padding: 5px;
+}
+div label{
+    display: block;
+    width: 180px;
+    background-color: orangered;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin: 6px;
+    cursor: pointer;
+}
+div input{
+    display: none;
+}
+.card img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+}
+.gender{
+    width: 90px;
+    display: flex;
+    padding: 5px;
+}
